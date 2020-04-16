@@ -1,0 +1,10 @@
+rule1 
+ON analog#a0 DO 
+   Backlog scale1 %value%,250,800,0,100; var1 (100-var1); publish domoticz/in {"idx":184,"nvalue":%var1%}
+ENDON 
+ON Mqtt#Connected DO 
+   publish domoticz/in {"idx":184,"nvalue":%var1%} 
+ENDON
+ON Time#Minute DO
+   publish domoticz/in {"idx":184,"nvalue":%var1%}
+ENDON
