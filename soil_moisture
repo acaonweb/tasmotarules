@@ -7,3 +7,8 @@ rule1
 ON analog#a0 DO 
    Backlog scale1 %value%,%mem1%,%mem2%,0,100; delay 2; var1 (100-var1); delay 2; publish domoticz/in {"idx":184,"nvalue":%var1%}; delay 2
 ENDON 
+
+rule1 
+ON analog#a0 DO 
+   Backlog scale1 %value%, %mem1%, %mem2% ,0,100; var1 (100-var1); publish domoticz/in {"idx":184,"nvalue":%var1%}
+ENDON
