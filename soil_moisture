@@ -10,11 +10,11 @@ ENDON
 
 rule1 
 ON analog#a0 DO 
-   Backlog scale1 %value%, %mem1%, %mem2% ,0,100; var1 (100-var1); publish domoticz/in {"idx":184,"nvalue":%var1%}
+   Backlog scale1 %value%, %mem1%, %mem2% ,0,100; var2 (100-var1); publish domoticz/in {"idx":184,"nvalue":%var2%}
 ENDON
 
 
 rule1 
 ON tele-analog#a0 DO 
-   Backlog scale1 %value%, %mem1%, %mem2% ,0,100; var1 (100-var1); publish domoticz/in {"idx":184,"nvalue":%var1%}
+   Backlog scale1 %value%, %mem1%, %mem2% ,0,100; var2 (100-var1); publish domoticz/in {"idx":184,"nvalue":%var2%}
 ENDON
