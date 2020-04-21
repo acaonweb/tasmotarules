@@ -19,8 +19,8 @@ ENDON
 !!!!!!! v2.0
 
 ON analog#a0 DO 
-   Backlog scale1 %value%, %mem2%, %mem1% ,100,0; publish domoticz/in {"idx":184,"nvalue": %var1% }
-   Backlog scale2 %var1%, 100,0 ,%mem2%,%mem1%; publish domoticz/in {"idx":185,"svalue": "%var2%" }
+   Backlog scale1 %value%, %mem2%, %mem1% ,100,0; publish domoticz/in {"idx":184,"nvalue": %var1% };
+   scale2 %var1%, 100,0 ,%mem2%,%mem1%; publish domoticz/in {"idx":185,"svalue": "%var2%" }
 ENDON
 
 
