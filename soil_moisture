@@ -46,7 +46,9 @@ ENDON
 ON Mqtt#Connected
    publish domoticz/in {"command":"switchlight","idx":186,"switchcmd":"Toggle"}
 ENDON
-
+ON System#Boot
+   publish domoticz/in {"command":"switchlight","idx":186,"switchcmd":"Toggle"}
+ENDON
 
 
 rule1 
