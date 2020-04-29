@@ -45,7 +45,8 @@ ON tele-analog#a0 DO
 ENDON
 ON Mqtt#Connected
    publish domoticz/in {"command":"switchlight","idx":186,"switchcmd":"Toggle"}
-ENDONON System#Boot
+ENDON
+ON System#Boot
    publish domoticz/in {"command":"switchlight","idx":186,"switchcmd":"Toggle"}
 ENDON
 
